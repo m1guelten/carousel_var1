@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --height-main: 700px;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .slides {
   position: relative;
-  height: 700px;
+  height: var(--height-main);
   min-width: 400px;
   padding: 0px;
   margin: 0px;
@@ -100,7 +106,7 @@ body {
 }
 .indicators {
   position: absolute;
-  top: 690px;
+  top: calc(var(--height-main) - 10px);
   left: 0;
   right: 0;
   justify-content: center;
@@ -128,17 +134,17 @@ body {
   z-index: 2;
 }
 .control-pause {
-  top: 625px;
+  top: calc(var(--height-main) - 75px);
   left: 10px;
   right: 10px;
   justify-content: center;
 }
 .control-prev {
-  top: 325px;
+  top: calc(var(--height-main) / 2 - 20px);
   left: 10px;
 }
 .control-next {
-  top: 325px;
+  top: calc(var(--height-main) / 2 - 20px);
   right: 10px;
 }
 .control:hover {
